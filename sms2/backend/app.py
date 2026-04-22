@@ -26,7 +26,7 @@ def wait_for_db():
             print("⏳ Waiting for MySQL...", e)
             time.sleep(3)
 
-    raise Exception("❌ Cannot connect to MySQL after retries")
+    wait_for_db()
 
 
 @app.route('/')
